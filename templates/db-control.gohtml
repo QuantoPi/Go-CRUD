@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>DB control</title>
+        <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+        <script src="../static/js/dbControl.js" defer></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="sidebar">
+                <h1>Sidebar</h1>
+                <a href="/">Home Page</a>
+                <a href="/costumers-table">Costumers database</a>  
+                <a href="/db-handler">Database Control</a> 
+            </div>
+            <div class="content">
+                <center>
+                    <h1>Database Control</h1>
+                </center>
+                <h2>Post new costumer</h2>
+                <form id="post-costumer">
+                    <label>First Name</label>
+                    <input type="text" id="FName">
+                    <label>Last Name</label>
+                    <input type="text" id="LName"><br>
+                    <label>Email</label>
+                    <input type="text" id="Email">
+                    <label>Phone Number</label>
+                    <input  type="text" id="PhoneNumber"><br>
+                    <input type="button" onclick="sendCostumer();" value="Submit">
+                </form>
+                <hr>
+                <h2>Delete costumer</h2>
+                <form id="delete-id-form">
+                    <label>Costumer ID:</label>
+                    <input type="text" id="costumer-id-delete"><br>
+                    <input type="button" onclick="deleteCostumer();" value="Delete">
+                </form>
+                <hr>
+                <h2>Update new costumer</h2>
+                <form id="update-costumer">
+                    <label>Costumer ID</label>
+                    <input type="text" id="CostumerID"><br>
+                    <label>First Name</label>
+                    <input type="text" id="UFName">
+                    <label>Last Name</label>
+                    <input type="text" id="ULName"><br>
+                    <label>Email</label>
+                    <input type="text" id="UpdateEmail">
+                    <label>Phone Number</label>
+                    <input  type="text" id="UPhoneNumber"><br>
+                    <input type="button" onclick="updateCostumer();" value="Update">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

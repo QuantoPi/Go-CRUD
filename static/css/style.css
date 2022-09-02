@@ -1,0 +1,97 @@
+body {
+    overflow: auto;
+    font-family: sans-serif;
+}
+
+.container {
+    width: auto;
+    height: auto;
+    display: flex;
+}
+
+.sidebar {
+    color: white;
+    margin: -10px;
+    padding: 0;
+    width: 200px;
+    background-color: #6A75BA;
+    position: fixed;
+    height: 100%;
+}
+
+.sidebar h1 {
+    padding: 16px;
+    text-align: center;
+}
+
+.sidebar a {
+    font-weight: bold;
+    display: block;
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.sidebar a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.sidebar a:hover:not(.active) {
+    background-color: #929CDE;
+    color: white;
+}
+
+div.content {
+    margin-left: 190px;
+    margin-top: -10px;
+    padding: 1px 16px;
+    width: 100%;
+    font-size: large;
+}
+
+div.content p {
+    font-size: 20px;
+}
+
+@media screen and (max-width: 700px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .sidebar a {
+        float: left;
+    }
+
+    div.content {
+        margin-left: 0;
+    }
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+    .sidebar a {
+        text-align: center;
+        float: none;
+    }
+}
+
+.content {
+    overflow-y: auto;
+}
+
+.gorm-table {
+    margin-top: 2%;
+    font-family: Helvetica;
+    border-collapse: collapse;
+    width: 100%;
+}
+.gorm-table td, .gorm-table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+.gorm-table tr {
+    background-color: #f2f2f2;
+}

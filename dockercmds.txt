@@ -1,0 +1,1 @@
+docker run --name psql-go -e POSTGRES_USER=aureo -e POSTGRES_PASSWORD=myaureo -p 3000:5432 -d postgres
